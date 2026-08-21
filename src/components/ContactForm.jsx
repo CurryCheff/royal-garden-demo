@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { brand, serviceOptions } from "../data/content";
 import Reveal from "./Reveal";
+import WhatsAppButton from "./WhatsAppButton";
 
 const initialForm = { name: "", phone: "", service: "", details: "" };
 
@@ -28,12 +29,16 @@ export default function ContactForm() {
             Get Started
           </span>
           <h2 className="mt-4 font-serif text-4xl text-stone-900 sm:text-5xl">
-            Request Your Free Quote
+            Let's Talk About Your Project
           </h2>
           <p className="mt-5 max-w-md font-sans leading-relaxed text-stone-700">
             Tell us a little about your property and vision. A member of our design team will
             follow up within one business day.
           </p>
+
+          <WhatsAppButton className="mt-6 inline-flex items-center gap-2 rounded-full border border-evergreen-700 px-6 py-3 font-sans text-sm uppercase tracking-wider text-evergreen-700 transition-colors duration-300 hover:bg-evergreen-700 hover:text-stone-50">
+            Chat on WhatsApp
+          </WhatsAppButton>
 
           <div className="mt-10 space-y-4 font-sans text-sm text-stone-700">
             <p>

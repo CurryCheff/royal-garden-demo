@@ -3,6 +3,7 @@ import { useParallax } from "../hooks/useGsap";
 import { hero } from "../data/content";
 import PlaceholderImage from "./PlaceholderImage";
 import Reveal from "./Reveal";
+import WhatsAppButton from "./WhatsAppButton";
 
 export default function Hero() {
   const bgRef = useRef(null);
@@ -47,12 +48,12 @@ export default function Hero() {
 
           <Reveal delay={0.55}>
             <div className="mt-10 flex flex-wrap items-center gap-5">
-              <a
-                href="#contact"
-                className="rounded-full bg-terracotta-600 px-8 py-4 font-sans text-sm uppercase tracking-wider text-stone-50 transition-colors duration-300 hover:bg-terracotta-700"
+              <WhatsAppButton
+                iconClassName="h-5 w-5"
+                className="flex items-center gap-2 rounded-full bg-terracotta-600 px-8 py-4 font-sans text-sm uppercase tracking-wider text-stone-50 transition-colors duration-300 hover:bg-terracotta-700"
               >
                 {hero.cta}
-              </a>
+              </WhatsAppButton>
               <a
                 href="#portfolio"
                 className="group flex items-center gap-2 font-sans text-sm uppercase tracking-wider text-stone-50"

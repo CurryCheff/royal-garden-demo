@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "../hooks/useGsap";
 import { brand, navLinks } from "../data/content";
+import WhatsAppButton from "./WhatsAppButton";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -65,12 +66,9 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden lg:block">
-          <a
-            href="#contact"
-            className="rounded-full bg-terracotta-600 px-6 py-2.5 font-sans text-sm uppercase tracking-wider text-stone-50 transition-colors duration-300 hover:bg-terracotta-700"
-          >
-            Get a Free Quote
-          </a>
+          <WhatsAppButton className="flex items-center gap-2 rounded-full bg-terracotta-600 px-6 py-2.5 font-sans text-sm uppercase tracking-wider text-stone-50 transition-colors duration-300 hover:bg-terracotta-700">
+            Chat on WhatsApp
+          </WhatsAppButton>
         </div>
 
         <button
@@ -104,13 +102,12 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="#contact"
+          <WhatsAppButton
             onClick={() => setMenuOpen(false)}
-            className="mt-2 rounded-full bg-terracotta-600 px-6 py-3 text-center font-sans text-sm uppercase tracking-wider text-stone-50"
+            className="mt-2 flex items-center justify-center gap-2 rounded-full bg-terracotta-600 px-6 py-3 text-center font-sans text-sm uppercase tracking-wider text-stone-50"
           >
-            Get a Free Quote
-          </a>
+            Chat on WhatsApp
+          </WhatsAppButton>
         </div>
       )}
     </header>

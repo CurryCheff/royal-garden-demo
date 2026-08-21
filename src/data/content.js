@@ -5,10 +5,15 @@ export const brand = {
   name: "Royal Garden",
   tagline: "Landscaping & Paving",
   phone: "(555) 042-1890",
+  // E.164 format (country code + number, digits only) for the wa.me link below.
+  whatsappNumber: "15550421890",
   email: "hello@royalgarden.example",
   address: "128 Arbor Hill Road, Kingswood, CA 94210",
   hours: "Mon–Sat, 8am–6pm",
 };
+
+const whatsappMessage = "Hi Royal Garden! I'd like to talk about a project.";
+export const whatsappUrl = `https://wa.me/${brand.whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
 export const navLinks = [
   { label: "Services", href: "#services" },
@@ -23,7 +28,7 @@ export const hero = {
   headline: "Transform Your Outdoor Space Into a Living Masterpiece",
   subheading:
     "Royal Garden designs and builds refined landscapes and paved surroundings that elevate every property — crafted with precision, built to endure.",
-  cta: "Get a Free Quote",
+  cta: "Chat on WhatsApp",
   secondaryCta: "View Our Work",
   imagePrompt: "hero-background",
 };
