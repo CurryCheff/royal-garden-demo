@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  /* Deep greens */
+  --color-evergreen-950: #0e1c15;
+  --color-evergreen-900: #142a1f;
+  --color-evergreen-800: #1c3b2a;
+  --color-evergreen-700: #274f38;
+  --color-evergreen-600: #33654a;
+  --color-evergreen-500: #457a5e;
+
+  /* Stone gray */
+  --color-stone-950: #171512;
+  --color-stone-900: #24211d;
+  --color-stone-700: #55504a;
+  --color-stone-500: #8a8378;
+  --color-stone-300: #c9c2b6;
+  --color-stone-200: #e2ddd3;
+  --color-stone-100: #efebe3;
+  --color-stone-50: #f7f4ee;
+
+  /* Warm terracotta */
+  --color-terracotta-700: #a3502c;
+  --color-terracotta-600: #bd6438;
+  --color-terracotta-500: #c97a4a;
+  --color-terracotta-400: #db9a6d;
+  --color-terracotta-100: #f3e2d3;
+
+  --font-serif: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Jost", "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-stone-50);
+    color: var(--color-stone-900);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+}
+
+@layer utilities {
+  .tracking-widest-xl {
+    letter-spacing: 0.28em;
+  }
+}
