@@ -14,12 +14,12 @@ export const brand = {
 
 const whatsappMessage = "Hi Royal Garden! I'd like to talk about a project.";
 export const whatsappUrl = `https://wa.me/${brand.whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+export const telUrl = `tel:+${brand.whatsappNumber}`;
+export const mailUrl = `mailto:${brand.email}`;
 
 export const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
-  { label: "Process", href: "#process" },
-  { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -109,68 +109,6 @@ export const portfolioItems = [
     imagePromptBefore: "portfolio-6-before",
     imagePromptAfter: "portfolio-6-after",
   },
-];
-
-export const process = [
-  {
-    step: "01",
-    title: "Consultation",
-    description:
-      "We visit your property to understand your vision, assess the site, and discuss goals, style, and budget.",
-  },
-  {
-    step: "02",
-    title: "Design",
-    description:
-      "Our designers create a tailored concept and material palette, refined with you until every detail feels right.",
-  },
-  {
-    step: "03",
-    title: "Build",
-    description:
-      "Our craftsmen bring the design to life with meticulous attention to grading, materials, and finish quality.",
-  },
-  {
-    step: "04",
-    title: "Aftercare",
-    description:
-      "We hand off a finished space and offer ongoing maintenance plans to keep it flourishing for years to come.",
-  },
-];
-
-export const testimonials = [
-  {
-    id: 1,
-    quote:
-      "Royal Garden transformed our backyard beyond anything we imagined. The stonework is flawless and the planting feels like it's always belonged there.",
-    name: "Eleanor Whitfield",
-    role: "Homeowner, Kingswood",
-    avatarPrompt: "avatar-1",
-  },
-  {
-    id: 2,
-    quote:
-      "Professional from the first consultation to the final walk-through. Our new driveway and entrance have completely elevated the property's curb appeal.",
-    name: "Marcus Delgado",
-    role: "Homeowner, Brookline Estates",
-    avatarPrompt: "avatar-2",
-  },
-  {
-    id: 3,
-    quote:
-      "We hired Royal Garden for our restaurant's courtyard and the result is stunning. Guests comment on it constantly. True craftsmanship.",
-    name: "Priya Anand",
-    role: "Owner, The Olive Terrace",
-    avatarPrompt: "avatar-3",
-  },
-];
-
-export const serviceOptions = [
-  "Paving",
-  "Landscaping",
-  "Garden Design",
-  "Maintenance",
-  "Other / Not Sure",
 ];
 
 export const footerLinks = {

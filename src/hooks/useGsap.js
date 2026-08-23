@@ -39,12 +39,14 @@ export function useReveal(ref, { y = 40, delay = 0, start = "top 85%" } = {}) {
 
 /**
  * Staggers the reveal of matching children inside a container as it
- * enters the viewport. Used for service cards and gallery grids.
+ * enters the viewport — fading in while sliding from `x`/`y` offsets
+ * to their resting position. Pass a positive `x` (e.g. 120) to have
+ * items enter from the right; leave `y` for the usual slide-up.
  */
 export function useStaggerReveal(
   containerRef,
   selector,
-  { y = 40, stagger = 0.12, start = "top 80%" } = {}
+  { x = 0, y = 40, stagger = 0.12, start = "top 80%" } = {}
 ) {
   useEffect(() => {
     const container = containerRef.current;
@@ -54,9 +56,10 @@ export function useStaggerReveal(
       const items = container.querySelectorAll(selector);
       gsap.fromTo(
         items,
-        { opacity: 0, y },
+        { opacity: 0, x, y },
         {
           opacity: 1,
+          x: 0,
           y: 0,
           duration: 0.9,
           stagger,
@@ -71,7 +74,7 @@ export function useStaggerReveal(
     }, container);
 
     return () => ctx.revert();
-  }, [containerRef, selector, y, stagger, start]);
+  }, [containerRef, selector, x, y, stagger, start]);
 }
 
 /**

@@ -3,9 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
-import Process from "./components/Process";
-import Testimonials from "./components/Testimonials";
-import ContactForm from "./components/ContactForm";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { ScrollTrigger } from "./hooks/useGsap";
 
@@ -25,9 +23,7 @@ export default function App() {
         <Hero />
         <Services />
         <Portfolio />
-        <Process />
-        <Testimonials />
-        <ContactForm />
+        <Contact />
       </main>
       <Footer />
     </div>

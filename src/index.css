@@ -56,3 +56,18 @@
     letter-spacing: 0.28em;
   }
 }
+
+@keyframes shimmer-sweep {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@layer utilities {
+  .animate-shimmer {
+    animation: shimmer-sweep 1.6s ease-in-out infinite;
+  }
+}

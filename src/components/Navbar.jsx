@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { ScrollTrigger } from "../hooks/useGsap";
-import { brand, navLinks } from "../data/content";
+import { navLinks } from "../data/content";
 import WhatsAppButton from "./WhatsAppButton";
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -28,27 +29,13 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
+      <div className="bg-stone-900 px-6 py-1.5 text-center font-sans text-[11px] leading-snug text-stone-200 lg:px-10">
+        Concept demo for pitch purposes — portfolio photos and testimonials are AI-generated placeholders, not real projects or clients.
+      </div>
+
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <a href="#top" className="flex items-center gap-3">
-          <span
-            className={`flex h-10 w-10 items-center justify-center rounded-full border font-serif text-lg transition-colors duration-500 ${
-              solid
-                ? "border-evergreen-700 text-evergreen-700"
-                : "border-stone-50 text-stone-50"
-            }`}
-          >
-            RG
-          </span>
-          <span
-            className={`flex flex-col leading-none transition-colors duration-500 ${
-              solid ? "text-stone-900" : "text-stone-50"
-            }`}
-          >
-            <span className="font-serif text-xl tracking-wide">{brand.name}</span>
-            <span className="text-[10px] uppercase tracking-widest-xl opacity-70">
-              {brand.tagline}
-            </span>
-          </span>
+        <a href="#top" className="flex items-center">
+          <img src={logo} alt="Royal Garden Landscapes and Paving logo" className="h-12 w-auto" />
         </a>
 
         <nav className="hidden items-center gap-9 lg:flex">

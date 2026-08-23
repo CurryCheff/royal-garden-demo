@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useParallax } from "../hooks/useGsap";
 import { hero } from "../data/content";
-import PlaceholderImage from "./PlaceholderImage";
+import SlotImage from "./SlotImage";
 import Reveal from "./Reveal";
 import WhatsAppButton from "./WhatsAppButton";
 
@@ -13,7 +13,8 @@ export default function Hero() {
     <section id="top" className="relative isolate flex h-screen min-h-[640px] items-center overflow-hidden bg-evergreen-950">
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div ref={bgRef} className="absolute inset-[-10%]">
-          <PlaceholderImage
+          <SlotImage
+            slug="hero-background"
             promptId="1 — hero-background"
             label="Hero Background: sweeping estate landscape at golden hour"
             alt="Wide-angle photograph of a manicured estate garden and stone patio at golden hour"
@@ -68,9 +69,8 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-stone-50/70 sm:flex">
-        <span className="font-sans text-[10px] uppercase tracking-widest-xl">Scroll</span>
-        <span className="h-10 w-px bg-stone-50/40" />
+      <div className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 sm:block">
+        <span className="block h-10 w-px bg-stone-50/40" />
       </div>
     </section>
   );

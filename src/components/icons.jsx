@@ -79,6 +79,35 @@ export function WhatsAppIcon(props) {
   );
 }
 
+export function PhoneIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" {...props}>
+      <path
+        d="M5.5 4h3l1.5 4-2 1.5a11.5 11.5 0 0 0 6.5 6.5l1.5-2 4 1.5v3c0 1.1-.9 2-2 2C10.5 20.5 3.5 13.5 3.5 6c0-1.1.9-2 2-2Z"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function MailIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" {...props}>
+      <rect x="3.5" y="5.5" width="17" height="13" rx="1.5" stroke="currentColor" strokeWidth="1.4" />
+      <path
+        d="M4.5 6.5l7.5 6.5 7.5-6.5"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export const iconMap = {
   paving: PavingIcon,
   landscaping: LandscapingIcon,

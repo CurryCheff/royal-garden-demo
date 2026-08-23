@@ -1,4 +1,5 @@
 import { brand, footerLinks, navLinks } from "../data/content";
+import logo from "../assets/logo.png";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -8,12 +9,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-1 gap-12 border-b border-stone-50/10 pb-14 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full border border-stone-50 font-serif text-lg text-stone-50">
-                RG
-              </span>
-              <span className="font-serif text-xl text-stone-50">{brand.name}</span>
-            </div>
+            <img src={logo} alt="Royal Garden Landscapes and Paving logo" className="h-20 w-auto" />
             <p className="mt-5 max-w-xs font-sans text-sm leading-relaxed text-stone-300/80">
               Premium landscaping and paving, crafted for properties that deserve more.
             </p>
@@ -71,7 +67,10 @@ export default function Footer() {
           <p className="font-sans text-xs text-stone-400/70">
             &copy; {year} {brand.name}. All rights reserved.
           </p>
-          <p className="font-sans text-xs text-stone-400/70">Demo site — placeholder content</p>
+          <p className="max-w-md text-center font-sans text-xs text-stone-400/70 sm:text-right">
+            Concept demo — hero, portfolio, and testimonial imagery are AI-generated placeholders,
+            not real completed projects or client reviews.
+          </p>
         </div>
       </div>
     </footer>

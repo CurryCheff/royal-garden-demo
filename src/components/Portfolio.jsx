@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap, ScrollTrigger } from "../hooks/useGsap";
 import { portfolioCategories, portfolioItems } from "../data/content";
-import PlaceholderImage from "./PlaceholderImage";
+import SlotImage from "./SlotImage";
 import Reveal from "./Reveal";
 
 export default function Portfolio() {
@@ -75,7 +75,8 @@ export default function Portfolio() {
             >
               <div className="grid grid-cols-2 gap-px bg-stone-200">
                 <div className="relative">
-                  <PlaceholderImage
+                  <SlotImage
+                    slug={item.imagePromptBefore}
                     promptId={`${item.id}a — ${item.imagePromptBefore}`}
                     label="Before"
                     alt={`${item.title} — before photo`}
@@ -86,7 +87,8 @@ export default function Portfolio() {
                   </span>
                 </div>
                 <div className="relative">
-                  <PlaceholderImage
+                  <SlotImage
+                    slug={item.imagePromptAfter}
                     promptId={`${item.id}b — ${item.imagePromptAfter}`}
                     label="After"
                     alt={`${item.title} — after photo`}

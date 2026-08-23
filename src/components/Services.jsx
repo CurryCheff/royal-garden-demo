@@ -6,10 +6,10 @@ import Reveal from "./Reveal";
 
 export default function Services() {
   const gridRef = useRef(null);
-  useStaggerReveal(gridRef, "[data-service-card]", { stagger: 0.12, y: 50 });
+  useStaggerReveal(gridRef, "[data-service-card]", { x: 120, y: 0, stagger: 0.15 });
 
   return (
-    <section id="services" className="bg-stone-50 py-28 lg:py-36">
+    <section id="services" className="overflow-x-hidden bg-stone-50 py-28 lg:py-36">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal className="max-w-xl">
           <span className="font-sans text-xs uppercase tracking-widest-xl text-terracotta-600">
